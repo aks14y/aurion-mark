@@ -1,7 +1,6 @@
 import { motion, useReducedMotion } from 'motion/react'
 import { process } from '@/data/site'
 import { Section } from '@/components/ui/Section'
-import { Heading } from '@/components/ui/Heading'
 import { Reveal } from '@/components/ui/Reveal'
 import { EASE_OUT_EXPO, VIEWPORT } from '@/lib/motion'
 
@@ -16,17 +15,15 @@ export function Process() {
   const reduce = useReducedMotion()
 
   return (
-    <Section id="process">
+    <Section id="process" className="bg-ink-3 text-ink-2">
       <div className="shell">
         <Reveal>
           <span aria-hidden className="rule-brass" />
           <div className="mt-6 flex flex-wrap items-end justify-between gap-6">
-            <Heading
-              lead={process.heading.lead}
-              emphasis={process.heading.emphasis}
-              className="text-[clamp(2rem,4.4vw,3.5rem)]"
-            />
-            <p className="measure-tight text-sm text-chalk-dim">
+            <h2 className="max-w-[16ch] font-display text-[clamp(2rem,4.4vw,3.5rem)] leading-[1.02] tracking-[-0.01em] text-ink-2">
+              {process.heading.lead}{process.heading.emphasis}
+            </h2>
+            <p className="measure-tight text-sm text-ink-2/70">
               Every project follows the same five stages, with approvals handled
               before anything is fabricated.
             </p>
@@ -65,11 +62,10 @@ export function Process() {
                   />
 
                   <div className="lg:pr-6">
-                    <span className="type-label text-brass">{step.n}</span>
-                    <h3 className="mt-3 font-display text-xl font-semibold tracking-[-0.015em] text-chalk">
+                      <h3 className="mt-3 font-display text-xl font-semibold tracking-[-0.01em] text-ink-2">
                       {step.title}
                     </h3>
-                    <p className="measure mt-2.5 text-sm text-chalk-dim">
+                    <p className="measure mt-2.5 text-sm text-ink-2/70">
                       {step.body}
                     </p>
                   </div>

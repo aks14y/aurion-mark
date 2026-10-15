@@ -12,7 +12,7 @@ export default function ProcessPage() {
           <>
             Our
             <br />
-            <span className="text-chalk-dim">process.</span>
+            <span className="text-ink-2">process.</span>
           </>
         }
         intro="Five stages from first consultation to handover, with authority approvals completed before anything is fabricated."

@@ -35,10 +35,9 @@ export function Projects() {
                 <li className="group relative h-full">
                   <Link to="/projects" className="relative flex min-h-[22rem] h-full flex-col justify-end overflow-hidden bg-ink p-6 sm:min-h-[28rem] sm:p-8">
                     <img src={image.src} alt={image.alt} loading="lazy" className="absolute inset-0 h-full w-full object-cover opacity-65 grayscale transition duration-700 ease-[var(--ease-out-expo)] group-hover:scale-105 group-hover:opacity-85 group-hover:grayscale-0" />
-                    <span className="absolute inset-0 bg-gradient-to-t from-ink via-ink/35 to-transparent" />
-                    <span className="relative type-label text-chalk-faint transition-colors duration-500 group-hover:text-brass">{String(i + 1).padStart(2, '0')}</span>
+                    <span className="absolute inset-0 bg-ink/55" />
                     <span className="relative mt-16 block max-w-sm">
-                      <span className="block font-display text-[clamp(1.5rem,2.4vw,2.2rem)] font-normal leading-tight tracking-[-0.02em] text-chalk">{category.name}</span>
+                      <span className="block font-display text-[clamp(1.5rem,2.4vw,2.2rem)] font-normal leading-tight tracking-[-0.01em] text-chalk">{category.name}</span>
                       <span className="mt-2 block text-sm text-chalk-dim">{category.count}</span>
                       <span aria-hidden className="mt-6 block h-1 w-14 bg-brass transition-[width] duration-500 group-hover:w-full" />
                     </span>

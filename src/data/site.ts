@@ -13,11 +13,6 @@ export const company = {
   country: 'United Arab Emirates',
 } as const
 
-export const tagline = [
-  { lead: 'Built with ', emphasis: 'precision.' },
-  { lead: 'Finished with ', emphasis: 'purpose.' },
-] as const
-
 export const nav = [
   { label: 'About', to: '/about' },
   { label: 'Services', to: '/services' },
@@ -28,10 +23,8 @@ export const nav = [
 ] as const
 
 export const hero = {
-  eyebrow: 'Dubai design + build',
-  heading: ['Aurion Mark', 'Dubai, UAE'],
-  locale: 'Dubai, UAE',
-  intro: 'Turnkey interiors from our Dubai workshops, on one contract.',
+  heading: ['From drawing', 'to handover.'],
+  intro: 'Our Dubai team designs, fabricates and installs under one contract.',
 } as const
 
 /** Hero specification plate — the practical facts a buyer checks first. */
@@ -66,7 +59,7 @@ export const why = {
 export const stats = [
   { value: '200+', label: 'Projects Delivered' },
   { value: '25+', label: 'Years Experience' },
-  { value: '09', label: 'Trade Divisions' },
+  { value: '9', label: 'Trade Divisions' },
 ] as const
 
 export const divisions = {

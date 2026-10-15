@@ -47,7 +47,7 @@ export function Stat({ value, label }: StatProps) {
 
   return (
     <div ref={ref}>
-      <div className="font-display text-[clamp(2.5rem,6vw,4rem)] font-semibold leading-none tracking-[-0.03em] text-chalk">
+      <div className="font-display text-[clamp(2.5rem,6vw,4rem)] font-semibold leading-none tracking-[-0.03em]">
         {prefix}
         {display}
         {suffix}

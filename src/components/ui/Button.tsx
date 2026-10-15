@@ -5,12 +5,12 @@ import type { ComponentPropsWithoutRef, ReactNode } from 'react'
 type Variant = 'solid' | 'outline'
 
 const base =
-  'inline-flex items-center justify-center gap-2 rounded-[2px] px-6 py-3.5 type-label transition-colors duration-300 ease-[var(--ease-out-expo)] select-none'
+  'inline-flex items-center justify-center gap-2 rounded-full px-6 py-3.5 type-label transition-colors duration-300 ease-[var(--ease-out-expo)] select-none'
 
 const variants: Record<Variant, string> = {
-  solid: 'bg-brass text-ink hover:bg-chalk',
+  solid: 'bg-brass text-ink hover:bg-[#ff714d] hover:text-ink active:bg-[#f15328]',
   outline:
-    'border border-line-2 text-chalk hover:border-brass hover:bg-ink-3',
+    'border border-line-2 text-chalk hover:border-brass hover:bg-ink-3 hover:text-ink-2',
 }
 
 type LinkButtonProps = {

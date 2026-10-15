@@ -1,73 +1,48 @@
 import { facility } from '@/data/site'
+import { photos } from '@/data/images'
 import { Section } from '@/components/ui/Section'
 import { Reveal } from '@/components/ui/Reveal'
+import { LinkButton } from '@/components/ui/Button'
 
-/**
- * The in-house workshop.
- *
- * Set as one large condensed statement over a faint technical grid, because the
- * claim — that everything is built and inspected in-house — is the commercial
- * point of the section.
- */
 export function Facility() {
   return (
-    <Section id="facility" className="grain relative overflow-hidden">
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0 -z-10 opacity-[0.05]"
-        style={{
-          backgroundImage:
-            'linear-gradient(var(--color-line-2) 1px, transparent 1px), linear-gradient(90deg, var(--color-line-2) 1px, transparent 1px)',
-          backgroundSize: '44px 44px',
-          maskImage:
-            'radial-gradient(ellipse 70% 70% at 30% 50%, black 20%, transparent 100%)',
-          WebkitMaskImage:
-            'radial-gradient(ellipse 70% 70% at 30% 50%, black 20%, transparent 100%)',
-        }}
-      />
-
-      <div className="shell grid gap-14 lg:grid-cols-12 lg:gap-16">
-        <div className="lg:col-span-7">
-          <Reveal>
-            <span aria-hidden className="rule-brass" />
-            <p className="mt-6 type-label text-chalk-dim">
-              {facility.heading.lead}
-              {facility.heading.emphasis}
-            </p>
+    <Section id="facility" className="bg-ink-2 text-ink">
+      <div className="shell">
+        <div className="overflow-hidden rounded-[1.75rem] bg-ink-3 lg:grid lg:grid-cols-2">
+          <Reveal className="relative min-h-[22rem] lg:min-h-[38rem]">
+            <img
+              src={photos.workshops.src}
+              alt={photos.workshops.alt}
+              loading="lazy"
+              className="absolute inset-0 h-full w-full object-cover"
+            />
           </Reveal>
 
-          <Reveal delay={0.08}>
-            <h2 className="mt-5 font-display text-[clamp(2.25rem,6vw,5rem)] font-semibold uppercase leading-[0.95] tracking-[-0.035em] text-chalk [font-stretch:84%]">
-              {facility.statement.map((line) => (
-                <span key={line} className="block">
-                  {line}
-                </span>
-              ))}
-            </h2>
-          </Reveal>
-
-          <Reveal delay={0.16}>
-            <p className="measure mt-8 text-chalk-dim">{facility.body}</p>
-          </Reveal>
+          <div className="flex flex-col justify-center p-7 text-ink-2 sm:p-10 lg:p-14">
+            <Reveal>
+              <p className="max-w-[14ch] font-display text-[clamp(2.5rem,4.4vw,4.2rem)] leading-[0.96] tracking-[-0.015em]">
+                Built here.<br />Ready on time.
+              </p>
+              <p className="mt-7 max-w-[42ch] text-base leading-relaxed text-ink-2/75 sm:text-lg">
+                {facility.body}
+              </p>
+            </Reveal>
+            <Reveal delay={0.1}>
+              <ul className="mt-8 grid grid-cols-2 gap-x-5 gap-y-3 text-sm text-ink-2/90">
+                {facility.workshops.map((shop) => (
+                  <li key={shop} className="flex items-start gap-2.5">
+                    <span aria-hidden className="mt-2 size-2 shrink-0 rounded-full bg-brass" />
+                    {shop}
+                  </li>
+                ))}
+              </ul>
+              <p className="mt-7 text-sm text-ink-2/55">Each unit is inspected and approved before it leaves the workshop.</p>
+              <LinkButton to="/facility" variant="outline" className="mt-8 w-fit rounded-full border-white/35 text-ink-2 hover:bg-white/10 hover:text-ink-2">
+                Inside our facility
+              </LinkButton>
+            </Reveal>
+          </div>
         </div>
-
-        <Reveal delay={0.2} className="lg:col-span-4 lg:col-start-9">
-          <h3 className="type-label text-chalk-faint">Workshops</h3>
-          <ul className="mt-5 border-t border-line">
-            {facility.workshops.map((shop) => (
-              <li
-                key={shop}
-                className="flex items-center gap-4 border-b border-line py-4"
-              >
-                <span aria-hidden className="size-1 shrink-0 bg-brass" />
-                <span className="text-sm text-chalk-dim">{shop}</span>
-              </li>
-            ))}
-          </ul>
-          <p className="mt-6 text-sm text-chalk-faint">
-            Every unit is inspected and approved before it leaves the facility.
-          </p>
-        </Reveal>
       </div>
     </Section>
   )

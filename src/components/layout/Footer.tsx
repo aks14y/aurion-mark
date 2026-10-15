@@ -65,7 +65,7 @@ export function Footer() {
       {/* Oversized wordmark, set as a closing graphic rather than a label. */}
       <div aria-hidden className="shell select-none pb-2">
         <span
-          className="block font-display font-semibold uppercase leading-[0.8] tracking-[-0.03em] text-ink-4"
+          className="block font-sans font-semibold uppercase leading-[0.8] tracking-[-0.03em] text-ink-4"
           style={{
             fontSize: 'clamp(3rem, 13vw, 12rem)',
             fontStretch: 'condensed',

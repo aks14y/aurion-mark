@@ -27,7 +27,7 @@ export function Mission() {
           {mission.blocks.map((block, i) => (
             <Reveal key={block.title} delay={i * 0.09}>
               <article className="border-t border-line-2 pt-7">
-                <h3 className="font-display text-xl font-semibold tracking-[-0.015em] text-chalk">
+                <h3 className="font-display text-xl font-semibold tracking-[-0.01em] text-chalk">
                   {block.title}
                 </h3>
                 <p className="mt-5 text-sm leading-[1.85] text-chalk-dim">

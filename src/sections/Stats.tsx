@@ -7,8 +7,8 @@ import { Stat } from '@/components/ui/Stat'
  */
 export function Stats() {
   return (
-    <section className="border-y border-line bg-ink-2">
-      <div className="shell grid gap-12 py-16 sm:grid-cols-3 sm:gap-8 sm:py-20">
+    <section className="bg-ink text-ink-2">
+      <div className="stats-grid">
         {stats.map((stat) => (
           <Stat key={stat.label} value={stat.value} label={stat.label} />
         ))}

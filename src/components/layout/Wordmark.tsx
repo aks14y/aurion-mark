@@ -8,9 +8,9 @@ import { cn } from '@/lib/utils'
  */
 export function Wordmark({ className }: { className?: string }) {
   return (
-    <span className={cn('inline-flex items-center gap-2.5', className)}>
+    <span className="inline-flex items-center gap-2.5">
       <span aria-hidden className="size-1.5 shrink-0 bg-brass" />
-      <span className="font-display text-[0.9375rem] font-semibold uppercase leading-none tracking-[0.18em] text-chalk">
+      <span className={cn('font-sans text-[0.9375rem] font-semibold uppercase leading-none tracking-[0.18em]', className)}>
         Aurion Mark
       </span>
     </span>

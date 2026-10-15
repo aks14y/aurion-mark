@@ -1,7 +1,7 @@
 /** Open-collection photographs of this trade's world, not Aurion Mark's own jobs. */
 export const photos = {
   hero: {
-    src: '/images/taipei-architecture-taipei1015097.jpg',
+    src: '/images/hero-construction-steel-optimized.jpg',
     alt: 'Glass curtain-wall facade photographed from the ground looking up',
   },
   intro: {

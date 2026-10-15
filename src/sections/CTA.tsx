@@ -27,16 +27,7 @@ export function CTA() {
   ]
 
   return (
-    <Section id="contact" className="grain relative overflow-hidden">
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -bottom-40 left-1/2 -z-10 size-[40rem] -translate-x-1/2 rounded-full opacity-[0.13] blur-[140px]"
-        style={{
-          background:
-            'radial-gradient(circle, var(--color-brass) 0%, transparent 70%)',
-        }}
-      />
-
+      <Section id="contact" className="relative overflow-hidden bg-ink-3 text-ink-2">
       <div className="shell grid gap-14 lg:grid-cols-12 lg:gap-16">
         <div className="lg:col-span-6">
           <Reveal>
@@ -44,12 +35,13 @@ export function CTA() {
             <Heading
               lead={contact.heading.lead}
               emphasis={contact.heading.emphasis}
+              tone="dark"
               className="mt-6 text-[clamp(2.25rem,5.5vw,4.25rem)]"
             />
           </Reveal>
 
           <Reveal delay={0.08}>
-            <p className="measure mt-7 text-chalk-dim">
+            <p className="measure mt-7 text-ink-2/85">
               Send us your drawings, a scope note or a site address. We will come
               back with a design direction, a bill of quantities and a programme.
             </p>
@@ -58,7 +50,7 @@ export function CTA() {
               <LinkButton
                 to="/services"
                 variant="outline"
-                className="sm:inline-flex"
+                className="border-white/45 text-ink-2 hover:border-white hover:bg-white/10 hover:text-ink-2 sm:inline-flex"
               >
                 Review our services
               </LinkButton>
@@ -67,16 +59,16 @@ export function CTA() {
         </div>
 
         <Reveal delay={0.14} className="lg:col-span-5 lg:col-start-8">
-          <dl className="border-t border-line">
+          <dl className="border-t border-white/20">
             {details.map(({ key, value, href }) => (
               <div
                 key={key}
-                className="flex items-baseline gap-6 border-b border-line py-4"
+                className="flex items-baseline gap-6 border-b border-white/20 py-4"
               >
-                <dt className="w-20 shrink-0 type-label text-chalk-faint">
+                <dt className="w-20 shrink-0 type-label text-ink-2/75">
                   {key}
                 </dt>
-                <dd className="text-sm text-chalk-dim">
+                <dd className="text-sm text-ink-2/90">
                   {href ? (
                     <a
                       href={href}
