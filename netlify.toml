@@ -1,0 +1,29 @@
+# Netlify configuration for Aurion Mark
+# Place this file in the same directory as package.json.
+
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+# React Router handles these routes in the browser.
+# Send unknown paths back to the Vite entry point so direct links work.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Keep deploy previews and branch deploys on the same Vite build settings.
+[context.deploy-preview]
+  command = "npm run build"
+  publish = "dist"
+
+[context.branch-deploy]
+  command = "npm run build"
+  publish = "dist"
+
+[context.production]
+  command = "npm run build"
+  publish = "dist"
